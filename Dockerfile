@@ -1,4 +1,4 @@
-FROM php:7.3.27-fpm-alpine3.13
+FROM php:7.4.27-fpm-alpine3.15
 RUN apk update
 RUN apk add libzip-dev zip libpng-dev freetype-dev libjpeg-turbo-dev
 RUN apk add --no-cache php7-pear php7-dev gcc musl-dev make
