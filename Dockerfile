@@ -16,3 +16,5 @@ RUN pecl install redis && docker-php-ext-enable redis
 RUN docker-php-ext-install pcntl
 ###############
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
+# install grpc ####
+RUN CPPFLAGS="-Wno-maybe-uninitialized" pecl install grpc-1.35.0 && docker-php-ext-enable grpc
